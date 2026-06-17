@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
 <title>FINOVO.LK</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -37,7 +39,7 @@ text-align:center;
 }
 
 .logo{
-font-size:32px;
+font-size:34px;
 font-weight:700;
 }
 
@@ -49,19 +51,21 @@ opacity:.9;
 
 .slider{
 position:relative;
-height:280px;
+height:230px;
 overflow:hidden;
 border-radius:20px;
 margin-top:15px;
+background:white;
 }
 
 .slide{
 position:absolute;
 width:100%;
 height:100%;
-object-fit:cover;
+object-fit:contain;
 opacity:0;
 transition:1s;
+padding:5px;
 }
 
 .slide.active{
@@ -74,9 +78,9 @@ padding:20px;
 
 .loan-card{
 background:#fafafa;
-padding:15px;
-border-radius:15px;
-box-shadow:0 3px 10px rgba(0,0,0,.08);
+padding:18px;
+border-radius:18px;
+box-shadow:0 3px 12px rgba(0,0,0,.08);
 }
 
 .loan-card h2{
@@ -88,14 +92,15 @@ text-align:center;
 label{
 display:block;
 font-weight:600;
-margin-bottom:5px;
+margin-bottom:6px;
 }
 
-input,select{
+input,
+select{
 width:100%;
-padding:12px;
+padding:14px;
 border:1px solid #ddd;
-border-radius:10px;
+border-radius:12px;
 margin-bottom:15px;
 }
 
@@ -109,10 +114,12 @@ font-size:16px;
 font-weight:bold;
 border-radius:12px;
 cursor:pointer;
+transition:.3s;
 }
 
 button:hover{
 background:#e66a00;
+transform:scale(1.02);
 }
 
 .result{
@@ -139,22 +146,22 @@ font-weight:bold;
 
 .schedule{
 margin-top:15px;
-font-size:14px;
+overflow:auto;
 }
 
-.schedule table{
+table{
 width:100%;
 border-collapse:collapse;
 }
 
-.schedule th,
-.schedule td{
+th,
+td{
 border:1px solid #ddd;
 padding:8px;
 text-align:center;
 }
 
-.schedule th{
+th{
 background:#ff7a00;
 color:white;
 }
@@ -169,38 +176,56 @@ color:#666;
 position:fixed;
 bottom:20px;
 right:20px;
+
 width:60px;
 height:60px;
+
 background:#25D366;
+
 border-radius:50%;
+
 display:flex;
+
 align-items:center;
+
 justify-content:center;
+
 text-decoration:none;
+
 font-size:28px;
+
 color:white;
+
 box-shadow:0 5px 15px rgba(0,0,0,.3);
 }
 
 @keyframes fadeIn{
+
 from{
 opacity:0;
 transform:translateY(20px);
 }
+
 to{
 opacity:1;
 transform:translateY(0);
 }
+
 }
+
 </style>
+
 </head>
+
 <body>
 
 <div class="container">
 
 <div class="header">
 
-<div class="logo">FINOVO.LK</div>
+<div class="logo">
+FINOVO.LK
+</div>
 
 <div class="tagline">
 Fast • Easy • Reliable
@@ -208,9 +233,11 @@ Fast • Easy • Reliable
 
 <div class="slider">
 
-<img src="https://i.ibb.co/gZ2R618f/Whats-App-Image-2026-06-18-at-02-33-54.jpg" class="slide active">
+<img src="https://i.ibb.co/gZ2R618f/Whats-App-Image-2026-06-18-at-02-33-54.jpg"
+class="slide active">
 
-<img src="https://i.ibb.co/Mb2NBtW/Whats-App-Image-2026-06-18-at-02-33-55.jpg" class="slide">
+<img src="https://i.ibb.co/Mb2NBtW/Whats-App-Image-2026-06-18-at-02-33-55.jpg"
+class="slide">
 
 </div>
 
@@ -228,7 +255,9 @@ Fast • Easy • Reliable
 <label>💵 Select Loan Amount</label>
 
 <select id="loanAmount">
+
 <option value="">Select Amount</option>
+
 <option value="40000">Rs.40,000</option>
 <option value="50000">Rs.50,000</option>
 <option value="60000">Rs.60,000</option>
@@ -236,12 +265,9 @@ Fast • Easy • Reliable
 <option value="100000">Rs.100,000</option>
 <option value="150000">Rs.150,000</option>
 <option value="200000">Rs.200,000</option>
-<option value="250000">Rs.250,000</option>
 <option value="300000">Rs.300,000</option>
-<option value="350000">Rs.350,000</option>
-<option value="400000">Rs.400,000</option>
-<option value="450000">Rs.450,000</option>
 <option value="500000">Rs.500,000</option>
+
 </select>
 
 <button onclick="calculateLoan()">
@@ -252,11 +278,14 @@ Fast • Easy • Reliable
 
 <div id="schedule" class="schedule"></div>
 
-<a href="https://forms.gle/rnLH69fTA4xhgwJ9A"
+<a
+href="https://forms.gle/rnLH69fTA4xhgwJ9A"
 target="_blank"
 class="apply-btn"
 id="applyBtn">
+
 🚀 Apply Now
+
 </a>
 
 </div>
@@ -264,114 +293,189 @@ id="applyBtn">
 </div>
 
 <div class="contact">
-📞 072 396 5406<br>
-📲 WhatsApp Support Available 24/7
-</div>
+
+📞 072 396 5406
+
+<br>
+
+📲 WhatsApp Support Available
 
 </div>
 
-<a href="https://wa.me/94723965406"
+</div>
+
+<a
+href="https://wa.me/94723965406"
 target="_blank"
 class="whatsapp">
+
 💬
+
 </a>
 
 <script>
 
-document.getElementById("applyDate").value =
-new Date().toISOString().split("T")[0];
+document
+.getElementById(
+"applyDate"
+)
+.value=
+new Date()
+.toISOString()
+.split("T")[0];
 
 function calculateLoan(){
 
-let amount=parseInt(document.getElementById("loanAmount").value);
+let amount=
+parseInt(
+document
+.getElementById(
+"loanAmount"
+).value
+);
 
 if(!amount){
-alert("Please Select Loan Amount");
+
+alert(
+"Please Select Loan Amount"
+);
+
 return;
+
 }
 
-let months=0;
+let months=
+Math.ceil(
+amount/25000
+);
 
-if(amount==40000) months=4;
-else if(amount==50000) months=4;
-else if(amount==60000) months=6;
-else if(amount==80000) months=6;
-else if(amount==100000) months=8;
-else if(amount<=200000) months=12;
-else if(amount<=300000) months=16;
-else if(amount<=400000) months=20;
-else if(amount<=500000) months=24;
+let interest=
+amount*0.08;
 
-let interest=amount*0.08;
-let total=amount+interest;
-let monthly=total/months;
+let total=
+amount+
+interest;
 
-let startDate=new Date(document.getElementById("applyDate").value);
+let monthly=
+(
+total/months
+)
+.toFixed(2);
 
-let endDate=new Date(startDate);
-endDate.setMonth(endDate.getMonth()+months);
+document
+.getElementById(
+"result"
+)
+.style.display=
+"block";
 
-document.getElementById("result").style.display="block";
+document
+.getElementById(
+"result"
+)
+.innerHTML=
 
-document.getElementById("result").innerHTML=`
+`
+
 <h3>📋 Loan Summary</h3>
 
-💵 Loan Amount: Rs.${amount.toLocaleString()}<br>
+Loan:
+Rs.${amount}
 
-📈 Interest (8%): Rs.${interest.toLocaleString()}<br>
+<br>
 
-💰 Total Payable: Rs.${total.toLocaleString()}<br>
+Interest:
+Rs.${interest}
 
-📆 Loan Period: ${months} Months<br>
+<br>
 
-💳 Monthly Installment: Rs.${monthly.toFixed(2)}<br>
+Total:
+Rs.${total}
 
-📅 Application Date: ${startDate.toLocaleDateString()}<br>
+<br>
 
-🏁 Final Payment Date: ${endDate.toLocaleDateString()}
+Period:
+${months} Months
+
+<br>
+
+Monthly:
+Rs.${monthly}
+
 `;
 
-let table=`
+let html=
+`
 <table>
+
 <tr>
+
 <th>Month</th>
-<th>Due Date</th>
+
 <th>Installment</th>
+
 </tr>
 `;
 
-for(let i=1;i<=months;i++){
+for(
+let i=1;
+i<=months;
+i++
+){
 
-let due=new Date(startDate);
-due.setMonth(due.getMonth()+i);
+html+=
 
-table+=`
+`
 <tr>
+
 <td>${i}</td>
-<td>${due.toLocaleDateString()}</td>
-<td>Rs.${monthly.toFixed(2)}</td>
+
+<td>Rs.${monthly}</td>
+
 </tr>
 `;
-}
-
-table+=`</table>`;
-
-document.getElementById("schedule").innerHTML=table;
-
-document.getElementById("applyBtn").style.display="block";
 
 }
 
-let slides=document.querySelectorAll(".slide");
-let index=0;
+html+=
+`</table>`;
+
+schedule.innerHTML=
+html;
+
+applyBtn.style.display=
+"block";
+
+}
+
+let slides=
+document
+.querySelectorAll(
+".slide"
+);
+
+let current=0;
 
 setInterval(()=>{
 
-slides[index].classList.remove("active");
+slides[current]
+.classList
+.remove(
+"active"
+);
 
-index=(index+1)%slides.length;
+current=
+(
+current+1
+)
+%
+slides.length;
 
-slides[index].classList.add("active");
+slides[current]
+.classList
+.add(
+"active"
+);
 
 },3000);
 
@@ -379,3 +483,4 @@ slides[index].classList.add("active");
 
 </body>
 </html>
+```
