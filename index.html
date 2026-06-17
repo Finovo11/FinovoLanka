@@ -1,11 +1,13 @@
-
-
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
 <title>FINOVO.LK</title>
 
 <style>
@@ -14,11 +16,12 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Segoe UI;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
 background:linear-gradient(135deg,#ff7a00,#ffb347);
+min-height:100vh;
 padding:15px;
 }
 
@@ -32,109 +35,254 @@ box-shadow:0 15px 40px rgba(0,0,0,.2);
 }
 
 .header{
+
+background:
+linear-gradient(
+135deg,
+#ff7a00,
+#ff9900
+);
+
 padding:20px;
+
 text-align:center;
-background:#ff8500;
+
 color:white;
+
 }
 
 .logo{
+
 font-size:34px;
-font-weight:bold;
+
+font-weight:700;
+
 }
 
-.slider{
-height:220px;
-position:relative;
-overflow:hidden;
+.tagline{
+
+margin-top:5px;
+
+opacity:.9;
+
+}
+
+.banner{
+
+margin-top:15px;
+
 background:white;
+
+border-radius:20px;
+
+overflow:hidden;
+
 }
 
-.slide{
-position:absolute;
+.banner img{
+
 width:100%;
-height:100%;
-object-fit:contain;
-opacity:0;
-transition:1s;
-}
 
-.active{
-opacity:1;
+display:block;
+
+object-fit:contain;
+
 }
 
 .content{
+
 padding:20px;
+
 }
 
-.card{
+.loan-card{
+
 background:#fafafa;
+
 padding:18px;
-border-radius:20px;
+
+border-radius:18px;
+
+box-shadow:
+0 4px 12px
+rgba(0,0,0,.08);
+
 }
 
-h2{
+.loan-card h2{
+
 text-align:center;
+
 color:#ff7a00;
-margin-bottom:20px;
+
+margin-bottom:15px;
+
 }
 
-select,
-button{
+label{
+
+display:block;
+
+font-weight:600;
+
+margin-bottom:5px;
+
+}
+
+input,
+select{
+
 width:100%;
-padding:15px;
-margin-top:10px;
-border-radius:12px;
+
+padding:13px;
+
 border:1px solid #ddd;
+
+border-radius:12px;
+
+margin-bottom:15px;
+
 }
 
 button{
-background:#ff7a00;
-color:white;
+
+width:100%;
+
+padding:15px;
+
 border:none;
+
+background:#ff7a00;
+
+color:white;
+
+font-size:16px;
+
 font-weight:bold;
+
+border-radius:12px;
+
 cursor:pointer;
+
 }
 
 .result{
+
 display:none;
+
 margin-top:15px;
+
 padding:15px;
+
 background:#fff4ec;
+
+border:2px solid #ff7a00;
+
 border-radius:15px;
+
 line-height:2;
+
 }
 
-.apply{
-display:none;
+.schedule{
+
 margin-top:15px;
-background:#25D366;
-color:white;
-padding:15px;
-text-align:center;
-text-decoration:none;
-border-radius:12px;
-font-weight:bold;
+
+overflow:auto;
+
 }
 
 table{
+
 width:100%;
-margin-top:10px;
+
 border-collapse:collapse;
+
 }
 
-th,td{
-padding:8px;
+th,
+td{
+
 border:1px solid #ddd;
+
+padding:8px;
+
 text-align:center;
+
 }
 
 th{
+
 background:#ff7a00;
+
 color:white;
+
+}
+
+.apply-btn{
+
+display:none;
+
+margin-top:15px;
+
+background:#25D366;
+
+color:white;
+
+padding:15px;
+
+border-radius:12px;
+
+text-decoration:none;
+
+text-align:center;
+
+font-weight:bold;
+
+}
+
+.contact{
+
+padding:20px;
+
+text-align:center;
+
+color:#666;
+
+}
+
+.whatsapp{
+
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+width:60px;
+
+height:60px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:white;
+
+font-size:28px;
+
+text-decoration:none;
+
 }
 
 </style>
+
 </head>
 
 <body>
@@ -144,20 +292,21 @@ color:white;
 <div class="header">
 
 <div class="logo">
+
 FINOVO.LK
+
 </div>
 
-<div>
+<div class="tagline">
+
 Fast • Easy • Reliable
+
 </div>
 
-<div class="slider">
+<div class="banner">
 
-<img class="slide active"
-src="https://i.ibb.co/gZ2R618f/Whats-App-Image-2026-06-18-at-02-33-54.jpg">
-
-<img class="slide"
-src="https://i.ibb.co/Mb2NBtW/Whats-App-Image-2026-06-18-at-02-33-55.jpg">
+<img
+src="https://i.ibb.co/HTZxVQQy/Chat-GPT-Image-Jun-18-2026-04-41-48-AM.png">
 
 </div>
 
@@ -165,57 +314,80 @@ src="https://i.ibb.co/Mb2NBtW/Whats-App-Image-2026-06-18-at-02-33-55.jpg">
 
 <div class="content">
 
-<div class="card">
+<div class="loan-card">
 
 <h2>
-💰 Loan Apply
+
+💰 Loan Calculator
+
 </h2>
 
-<select id="amount">
+<label>
+
+📅 Application Date
+
+</label>
+
+<input
+type="date"
+id="applyDate">
+
+<label>
+
+💵 Select Loan Amount
+
+</label>
+
+<select
+id="loanAmount">
 
 <option value="">
 Select Amount
 </option>
 
-<option value="40000">
-Rs.40,000
-</option>
-
-<option value="50000">
-Rs.50,000
-</option>
-
-<option value="100000">
-Rs.100,000
-</option>
-
-<option value="200000">
-Rs.200,000
-</option>
-
-<option value="300000">
-Rs.300,000
-</option>
-
-<option value="500000">
-Rs.500,000
-</option>
+<option value="40000">Rs.40,000</option>
+<option value="50000">Rs.50,000</option>
+<option value="60000">Rs.60,000</option>
+<option value="80000">Rs.80,000</option>
+<option value="100000">Rs.100,000</option>
+<option value="150000">Rs.150,000</option>
+<option value="200000">Rs.200,000</option>
+<option value="250000">Rs.250,000</option>
+<option value="300000">Rs.300,000</option>
+<option value="350000">Rs.350,000</option>
+<option value="400000">Rs.400,000</option>
+<option value="450000">Rs.450,000</option>
+<option value="500000">Rs.500,000</option>
 
 </select>
 
-<button onclick="nextStep()">
+<button
+onclick="calculateLoan()">
+
 ➡️ NEXT
+
 </button>
 
-<div id="result"
+<div
+id="result"
 class="result">
+
+</div>
+
+<div
+id="schedule"
+class="schedule">
+
 </div>
 
 <a
-id="apply"
-class="apply"
 href="https://forms.gle/rnLH69fTA4xhgwJ9A"
-target="_blank">
+
+target="_blank"
+
+id="applyBtn"
+
+class="apply-btn">
 
 🚀 APPLY NOW
 
@@ -225,31 +397,52 @@ target="_blank">
 
 </div>
 
+<div class="contact">
+
+📞 072 396 5406
+
+<br>
+
+📲 WhatsApp Support Available
+
 </div>
+
+</div>
+
+<a
+class="whatsapp"
+
+href="https://wa.me/94723965406">
+
+💬
+
+</a>
 
 <script>
 
-function nextStep(){
+applyDate.value=
+new Date()
+.toISOString()
+.split("T")[0];
+
+function calculateLoan(){
 
 let amount=
 parseInt(
-document
-.getElementById(
-"amount"
-).value
+loanAmount.value
 );
 
 if(!amount){
 
 alert(
-"Select Loan Amount"
+"Please Select Loan Amount"
 );
 
 return;
 
 }
 
-let months;
+let months=0;
 
 if(amount<=50000)
 months=4;
@@ -279,36 +472,44 @@ total/months
 )
 .toFixed(2);
 
-let html=
+result.style.display=
+"block";
+
+result.innerHTML=
 
 `
+
 <h3>
 📋 Loan Summary
 </h3>
 
-Loan :
-Rs.${amount}
+💵 Loan :
+Rs.${amount.toLocaleString()}
 
 <br>
 
-Interest :
-Rs.${interest}
+📈 Interest :
+Rs.${interest.toLocaleString()}
 
 <br>
 
-Total :
-Rs.${total}
+💰 Total :
+Rs.${total.toLocaleString()}
 
 <br>
 
-Monthly :
+💳 Monthly :
 Rs.${monthly}
 
 <br>
 
-Months :
+📆 Months :
 ${months}
 
+`;
+
+let table=
+`
 <table>
 
 <tr>
@@ -318,7 +519,6 @@ ${months}
 <th>Installment</th>
 
 </tr>
-
 `;
 
 for(
@@ -327,87 +527,35 @@ i<=months;
 i++
 ){
 
-html+=
+table+=
 
 `
 <tr>
 
-<td>
-${i}
-</td>
+<td>${i}</td>
 
-<td>
-Rs.${monthly}
-</td>
+<td>Rs.${monthly}</td>
 
 </tr>
+
 `;
 
 }
 
-html+=
+table+=
 `</table>`;
 
-document
-.getElementById(
-"result"
-)
-.innerHTML=
-html;
+schedule.innerHTML=
+table;
 
-document
-.getElementById(
-"result"
-)
-.style
-.display=
-"block";
-
-document
-.getElementById(
-"apply"
-)
-.style
-.display=
+applyBtn.style.display=
 "block";
 
 }
 
-let slides=
-document
-.querySelectorAll(
-".slide"
-);
-
-let i=0;
-
-setInterval(()=>{
-
-slides[i]
-.classList
-.remove(
-"active"
-);
-
-i=
-(
-i+1
-)
-%
-slides.length;
-
-slides[i]
-.classList
-.add(
-"active"
-);
-
-},3000);
-
 </script>
 
 </body>
+
 </html>
 ```
-
-මේකේ දැන් **වාරික (Monthly Installment)** සහ **Month table** දෙකම පේනවා.
