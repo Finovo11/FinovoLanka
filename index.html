@@ -6,52 +6,53 @@
 <title>FINOVO.LK</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
 background:linear-gradient(135deg,#ff7a00,#ffb347);
-padding:15px;
 min-height:100vh;
+padding:15px;
 }
 
 .container{
 max-width:430px;
 margin:auto;
 background:#fff;
-border-radius:25px;
+border-radius:30px;
 overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
+box-shadow:0 15px 40px rgba(0,0,0,.2);
+animation:fadeIn 1s ease;
 }
 
 .header{
 background:linear-gradient(135deg,#ff7a00,#ff9900);
+padding:20px;
 color:white;
 text-align:center;
-padding:25px;
 }
 
 .logo{
 font-size:32px;
-font-weight:bold;
+font-weight:700;
 }
 
 .tagline{
-margin-top:5px;
 font-size:14px;
+margin-top:5px;
+opacity:.9;
 }
 
 .slider{
 position:relative;
-height:220px;
+height:280px;
 overflow:hidden;
+border-radius:20px;
 margin-top:15px;
-border-radius:15px;
 }
 
 .slide{
@@ -71,17 +72,23 @@ opacity:1;
 padding:20px;
 }
 
-.card{
-background:#f8f8f8;
+.loan-card{
+background:#fafafa;
 padding:15px;
 border-radius:15px;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.loan-card h2{
+color:#ff7a00;
 margin-bottom:15px;
+text-align:center;
 }
 
 label{
 display:block;
+font-weight:600;
 margin-bottom:5px;
-font-weight:bold;
 }
 
 input,select{
@@ -96,11 +103,11 @@ button{
 width:100%;
 padding:15px;
 border:none;
-border-radius:12px;
 background:#ff7a00;
 color:white;
 font-size:16px;
 font-weight:bold;
+border-radius:12px;
 cursor:pointer;
 }
 
@@ -110,24 +117,52 @@ background:#e66a00;
 
 .result{
 display:none;
-background:#fff5ee;
-padding:15px;
-border-radius:15px;
-border:2px solid #ff7a00;
 margin-top:15px;
-line-height:1.8;
+padding:15px;
+background:#fff4ec;
+border:2px solid #ff7a00;
+border-radius:15px;
+line-height:2;
 }
 
 .apply-btn{
 display:none;
 margin-top:15px;
-padding:15px;
 background:#25D366;
 color:white;
 text-decoration:none;
+padding:15px;
 text-align:center;
 border-radius:12px;
 font-weight:bold;
+}
+
+.schedule{
+margin-top:15px;
+font-size:14px;
+}
+
+.schedule table{
+width:100%;
+border-collapse:collapse;
+}
+
+.schedule th,
+.schedule td{
+border:1px solid #ddd;
+padding:8px;
+text-align:center;
+}
+
+.schedule th{
+background:#ff7a00;
+color:white;
+}
+
+.contact{
+padding:20px;
+text-align:center;
+color:#666;
 }
 
 .whatsapp{
@@ -141,21 +176,24 @@ border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:28px;
 text-decoration:none;
+font-size:28px;
 color:white;
 box-shadow:0 5px 15px rgba(0,0,0,.3);
 }
 
-.contact{
-text-align:center;
-padding:20px;
-color:#666;
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
 }
-
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
 </style>
 </head>
-
 <body>
 
 <div class="container">
@@ -169,18 +207,20 @@ Fast • Easy • Reliable
 </div>
 
 <div class="slider">
-<img src="image1.jpg" class="slide active">
-<img src="image2.jpg" class="slide">
+
+<img src="https://i.ibb.co/gZ2R618f/Whats-App-Image-2026-06-18-at-02-33-54.jpg" class="slide active">
+
+<img src="https://i.ibb.co/Mb2NBtW/Whats-App-Image-2026-06-18-at-02-33-55.jpg" class="slide">
+
 </div>
 
 </div>
 
 <div class="content">
 
-<div class="card">
+<div class="loan-card">
 
 <h2>💰 Loan Calculator</h2>
-<br>
 
 <label>📅 Application Date</label>
 <input type="date" id="applyDate">
@@ -189,19 +229,19 @@ Fast • Easy • Reliable
 
 <select id="loanAmount">
 <option value="">Select Amount</option>
-<option value="40000">Rs. 40,000</option>
-<option value="50000">Rs. 50,000</option>
-<option value="60000">Rs. 60,000</option>
-<option value="80000">Rs. 80,000</option>
-<option value="100000">Rs. 100,000</option>
-<option value="150000">Rs. 150,000</option>
-<option value="200000">Rs. 200,000</option>
-<option value="250000">Rs. 250,000</option>
-<option value="300000">Rs. 300,000</option>
-<option value="350000">Rs. 350,000</option>
-<option value="400000">Rs. 400,000</option>
-<option value="450000">Rs. 450,000</option>
-<option value="500000">Rs. 500,000</option>
+<option value="40000">Rs.40,000</option>
+<option value="50000">Rs.50,000</option>
+<option value="60000">Rs.60,000</option>
+<option value="80000">Rs.80,000</option>
+<option value="100000">Rs.100,000</option>
+<option value="150000">Rs.150,000</option>
+<option value="200000">Rs.200,000</option>
+<option value="250000">Rs.250,000</option>
+<option value="300000">Rs.300,000</option>
+<option value="350000">Rs.350,000</option>
+<option value="400000">Rs.400,000</option>
+<option value="450000">Rs.450,000</option>
+<option value="500000">Rs.500,000</option>
 </select>
 
 <button onclick="calculateLoan()">
@@ -210,10 +250,12 @@ Fast • Easy • Reliable
 
 <div id="result" class="result"></div>
 
-<a href="YOUR_GOOGLE_FORM_LINK"
+<div id="schedule" class="schedule"></div>
+
+<a href="https://forms.gle/rnLH69fTA4xhgwJ9A"
 target="_blank"
-id="applyBtn"
-class="apply-btn">
+class="apply-btn"
+id="applyBtn">
 🚀 Apply Now
 </a>
 
@@ -229,8 +271,8 @@ class="apply-btn">
 </div>
 
 <a href="https://wa.me/94723965406"
-class="whatsapp"
-target="_blank">
+target="_blank"
+class="whatsapp">
 💬
 </a>
 
@@ -241,11 +283,7 @@ new Date().toISOString().split("T")[0];
 
 function calculateLoan(){
 
-const amount =
-parseInt(document.getElementById("loanAmount").value);
-
-const applyDate =
-document.getElementById("applyDate").value;
+let amount=parseInt(document.getElementById("loanAmount").value);
 
 if(!amount){
 alert("Please Select Loan Amount");
@@ -254,66 +292,86 @@ return;
 
 let months=0;
 
-if(amount===40000) months=4;
-else if(amount===50000) months=4;
-else if(amount===60000) months=6;
-else if(amount===80000) months=6;
-else if(amount===100000) months=8;
-else if(amount>100000 && amount<=200000) months=12;
-else if(amount>200000 && amount<=300000) months=16;
-else if(amount>300000 && amount<=400000) months=20;
-else if(amount>400000 && amount<=500000) months=24;
+if(amount==40000) months=4;
+else if(amount==50000) months=4;
+else if(amount==60000) months=6;
+else if(amount==80000) months=6;
+else if(amount==100000) months=8;
+else if(amount<=200000) months=12;
+else if(amount<=300000) months=16;
+else if(amount<=400000) months=20;
+else if(amount<=500000) months=24;
 
-const interest = amount * 0.08;
-const total = amount + interest;
-const monthly = total / months;
+let interest=amount*0.08;
+let total=amount+interest;
+let monthly=total/months;
 
-const startDate = new Date(applyDate);
-const endDate = new Date(applyDate);
+let startDate=new Date(document.getElementById("applyDate").value);
 
+let endDate=new Date(startDate);
 endDate.setMonth(endDate.getMonth()+months);
 
 document.getElementById("result").style.display="block";
 
 document.getElementById("result").innerHTML=`
-<h3>📋 Loan Summary</h3><br>
+<h3>📋 Loan Summary</h3>
 
-💵 Loan Amount:
-Rs. ${amount.toLocaleString()}<br>
+💵 Loan Amount: Rs.${amount.toLocaleString()}<br>
 
-📈 Interest (8%):
-Rs. ${interest.toLocaleString()}<br>
+📈 Interest (8%): Rs.${interest.toLocaleString()}<br>
 
-💰 Total Payable:
-Rs. ${total.toLocaleString()}<br>
+💰 Total Payable: Rs.${total.toLocaleString()}<br>
 
-📆 Loan Period:
-${months} Months<br>
+📆 Loan Period: ${months} Months<br>
 
-💳 Monthly Installment:
-Rs. ${monthly.toFixed(2)}<br>
+💳 Monthly Installment: Rs.${monthly.toFixed(2)}<br>
 
-📅 Application Date:
-${startDate.toLocaleDateString()}<br>
+📅 Application Date: ${startDate.toLocaleDateString()}<br>
 
-🏁 Final Payment Date:
-${endDate.toLocaleDateString()}
+🏁 Final Payment Date: ${endDate.toLocaleDateString()}
 `;
+
+let table=`
+<table>
+<tr>
+<th>Month</th>
+<th>Due Date</th>
+<th>Installment</th>
+</tr>
+`;
+
+for(let i=1;i<=months;i++){
+
+let due=new Date(startDate);
+due.setMonth(due.getMonth()+i);
+
+table+=`
+<tr>
+<td>${i}</td>
+<td>${due.toLocaleDateString()}</td>
+<td>Rs.${monthly.toFixed(2)}</td>
+</tr>
+`;
+}
+
+table+=`</table>`;
+
+document.getElementById("schedule").innerHTML=table;
 
 document.getElementById("applyBtn").style.display="block";
 
 }
 
 let slides=document.querySelectorAll(".slide");
-let current=0;
+let index=0;
 
-setInterval(function(){
+setInterval(()=>{
 
-slides[current].classList.remove("active");
+slides[index].classList.remove("active");
 
-current=(current+1)%slides.length;
+index=(index+1)%slides.length;
 
-slides[current].classList.add("active");
+slides[index].classList.add("active");
 
 },3000);
 
